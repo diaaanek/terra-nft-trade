@@ -4,8 +4,8 @@ body {
 }
 
 html {
-  font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Gilroy", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -20,6 +20,70 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Gilroy", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.Floater {
+  margin: 25px;
+  height: 100px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+  animation: 3s ease-in-out infinite alternate float;
+  animation-delay: 0s;
+}
+
+.Floater:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.Floater::nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.Floater:nth-of-type(4) {
+  animation-delay: 2.5s;
+}
+
+.Floater:nth-of-type(5) {
+  animation-delay: 3s;
+}
+
+.Floater:nth-of-type(6) {
+  animation-delay: 3.5s;
+}
+
+.Floater:nth-of-type(7) {
+  animation-delay: 4s;
+}
+.Floater:hover {
+  transform: scale(1) !important;
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+    box-shadow: 0 0 3px #888;
+  }
+
+  30% {
+    box-shadow: 0px 0px 10px #888;
+    transform: translate(0, 0) scale(1.1);
+  }
+
+  50% {
+    transform: translate(0px, -10px) scale(1.1);
+    box-shadow: 0px -5px 10px #888;
+  }
+
+  75% {
+    transform: translate(20px, 10px) scale(1.1);
+    box-shadow: 10px 5px 10px #888;
+  }
+
+  100% {
+    transform: translate(-10px, 20px) scale(1.1);
+    box-shadow: -5px 10px 10px #888;
+  }
 }

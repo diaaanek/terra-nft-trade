@@ -1,0 +1,64 @@
+.Floater {
+  margin: 25px;
+  height: 100px;
+
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  animation: 3s ease-in-out infinite alternate float;
+  animation-delay: 0s;
+}
+
+.Floater:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.Floater::nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.Floater:nth-of-type(4) {
+  animation-delay: 2.5s;
+}
+
+.Floater:nth-of-type(5) {
+  animation-delay: 3s;
+}
+
+.Floater:nth-of-type(6) {
+  animation-delay: 3.5s;
+}
+
+.Floater:nth-of-type(7) {
+  animation-delay: 4s;
+}
+.Floater:hover {
+  transform: scale(1) !important;
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  }
+
+  30% {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    transform: translate(0, 0) scale(1.1);
+  }
+
+  50% {
+    transform: translate(0px, -10px) scale(1.1);
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  75% {
+    transform: translate(20px, 10px) scale(1.1);
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  100% {
+    transform: translate(-10px, 20px) scale(1.1);
+    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.15);
+  }
+}
